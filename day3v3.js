@@ -1,4 +1,5 @@
 //jshint esversion:6
+//
 //var data = "785  516  744  272  511  358  194  69  754";
 var data = `
     4   21  894
