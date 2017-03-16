@@ -1,9 +1,15 @@
 //jshint esversion:6
 //var data = "785  516  744  272  511  358  194  69  754";
-var data = `4   21  894
-    2  628  436
-   50   94    8
-  346  188  656`;
+//var data = `4   21  894
+//    2  628  436
+//   50   94    8
+//  346  188  656`;
+//
+
+
+
+var data = "4   21  894 419  794  987 424  797  125 651  305  558 655  631  963 2  628  436 736   50  363 657  707 408";
+
 var triangleData = data.split("  ");//converts string into array of strings
 var triangleDataNumbers = [];
 for (var i = 0; i< triangleData.length; i++){
@@ -13,7 +19,7 @@ for (var i = 0; i< triangleData.length; i++){
 
 
 //loop through triangleData and:
-for (var i= 0; i<= triangleData.length; i++){
+/*for (var i= 0; i<= triangleData.length; i++){
     if(triangleData[i]=== " "){
         
         if(triangleData[i++]=== " "){
@@ -29,6 +35,7 @@ for (var i= 0; i<= triangleData.length; i++){
     }
 
 }
+*/
 console.log(triangleData);
 // if the character in the array which corresponds to i is a  space: 
 
@@ -42,7 +49,7 @@ console.log(triangleData);
 //console.log the arraz
 var allArraysOfThree = [];
 for (var i = 0; i <= triangleDataNumbers.length; i++){
-    if (isNaN(triangleDataNumbers[i]));
+    //if (isNaN(triangleDataNumbers[i]));
    // console.log("value is NaN",triangleDataNumbers[i]);
    allArraysOfThree.push(triangleDataNumbers.splice(0,3));//aus dem array triangleDataNumbers werden in jedem loop die ersten drei Werte entfernt und in den neuen array possibleTriangles gepackt
 }
