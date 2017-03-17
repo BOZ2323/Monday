@@ -1,17 +1,18 @@
+var dataTooManyWhiteSpace = "785  516  744  272  511  358    194   69  754";
 //var dataTooManyWhiteSpace = "4   21  894 419  794  987 424  797  125 651  305  558 655  631  963 2  628  436 736   50  363 657  707 408";
-var dataTooManyWhiteSpace = "4   21  894 419  794  987 424  797  125 651  305  558 655  631  963 2  628  436 736   50  363 657  707 408";
-
-var data = dataTooManyWhiteSpace.replace(/\s+/g, ' ');
+var data = dataTooManyWhiteSpace.replace(/\s+/g, ' ');// \s matches a whitespace. + matches one or more copies of the characterset. g means global meaning, not to stop at the first match, but go through the whole line.
+//var dataStillWithNewLineCharacter = dataTooManyWhiteSpace.replace(/\s+/g, ' ');// \s matches a whitespace. + matches one or more copies of the characterset. g means global meaning, not to stop at the first match, but go through the whole line.
+//var data = dataStillWithNewLineCharacter.replace(/\n+/g, '');
 console.log("data with only single white spaces: ",data);
 var triangleData = data.split(" ");//converts string into array of strings
-console.log(triangleData);
+console.log("triangleData: ",triangleData);
 var triangleDataNumbers = [];
 for (var i = 0; i< triangleData.length; i++){
     triangleDataNumbers.push(parseInt(triangleData[i]));//parseInt gets strings and returns whole numbers
 }
 //console.log("should be 9", triangleDataNumbers);
 
-console.log(triangleDataNumbers);
+console.log("trianlgeDataNumbers: ",triangleDataNumbers);
 
 var allArraysOfThree = [];
 for (var i = 0; i <= triangleDataNumbers.length; i++){
