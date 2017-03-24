@@ -19,9 +19,8 @@ for (var i = 0; i< triangleData.length; i++){
 
 //console.log("triangleDataNumbers: ",triangleDataNumbers.length);
 var originalLength = triangleDataNumbers.length;
-var numberOfItemsInEachArray = 3;
 var allArraysOfThree = [];
-for (var i = 0; i < originalLength/3; i++){
+for (var i = 0; i < originalLength; i++){
     //console.log ("originalLength/numberOfItemsInEachArray",originalLength/numberOfItemsInEachArray);
     //console.log("for loop + i:",i);
     //console.log("triangleDataNumbers before splice ", triangleDataNumbers);
