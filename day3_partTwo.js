@@ -40,7 +40,6 @@ for (var i = 0; i < 9 ; i++){
    i += 1;    
 
     newMainArray.push(arrayA);
-
     
 }
 for (var i = 0; i <9; i++){
