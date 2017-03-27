@@ -20,11 +20,8 @@ for (var i = 0; i< triangleData.length; i++){
     triangleDataNumbers.push(parseInt(triangleData[i]));//parseInt gets strings and returns whole numbers
 }
 
-/*
-   Next I will loop through triangleDataNumbers (the array with all numbers in it) and use the splice()method to cut out three items out of the original Array with every for loop. Then I push those three items into a new array. All those new arrays of three are pushed to allArrayOfThree []. I put the number 3 into a variable to be able to understand eeasier later on.
-   */
 var originalTriangleData = triangleDataNumbers.length;
-console.log("triangleDataNumbers: ",triangleDataNumbers);
+
 var originalLength = triangleDataNumbers.length;
 var arrayA = [];
 var arrayB = [];
@@ -32,22 +29,21 @@ var arrayC = [];
 
 var newMainArray = [];
 
-for (var i = 0; i < 9 ; i++){
+for (var i = 0; i < originalLength ; i++){
    
     arrayA.push(triangleDataNumbers.splice(i,1));
-    console.log("Push data to ArrayA", arrayA);
     console.log("i = ",i);
    i += 1;    
 
-    newMainArray.push(arrayA);
     
 }
-for (var i = 0; i <9; i++){
+for (var i = 0; i <originalLength; i++){
     
      arrayB.push(triangleDataNumbers.splice(i,1));
-   console.log("Push data to ArrayB", arrayB);
 
 
 }
 
 
+   console.log("Push data to ArrayA", arrayA);
+   console.log("Push data to ArrayB", arrayB);
