@@ -27,7 +27,7 @@ console.log("allArraysOfThree", allArraysOfThree);
 //function cutOfThreeArraysOfArray(){
 var arrays_ThreeAtATime = [];
 var originalArrayLength = allArraysOfThree.length;
-for(var i = 0; i < originalArrayLength; i++){
+for(var i = 0; i < originalArrayLength/3; i++){
     arrays_ThreeAtATime.push(allArraysOfThree.splice(0,3));
     //console.log("allArraysOfThree.splice(0,3): ",allArraysOfThree.splice(0,3));
 }
@@ -37,17 +37,14 @@ console.log ("arrays_ThreeAtATime",arrays_ThreeAtATime);
 //console.log("threeArraysOfThree",threeArraysOfThree);
 
 
-//for(var x = 0; x < times[i].length; x++) {
-  //  newTimes.push(times[i][x]);
-    //console.log(newTimes);  
-//}
 
 console.log("allArraysOfThree ", allArraysOfThree);
 function checkIfTriangle(){
     var count = 0;
     //console.log("*********************");
-    for (var i = 0; i < arrays_ThreeAtATime.length; i++){
-            console.log( "arrays_ThreeAtATime[i][0], [i][1], [i][2]",arrays_ThreeAtATime[i][0]," ",arrays_ThreeAtATime[i][1]," ", arrays_ThreeAtATime[i][2]);
+    var originalArrayLength = arrays_ThreeAtATime.length;
+    for (var i = 0; i < originalArrayLength/3; i++){
+            console.log( "arrays_ThreeAtATime[i][0], [i][1], [i][2]",arrays_ThreeAtATime[i][0][0]," ",arrays_ThreeAtATime[i][0][0]," ", arrays_ThreeAtATime[i][0][0]);
         //console.log("arrays_ThreeAtATime.length", arrays_ThreeAtATime.length);
             //console.log("output for loop", arrays_ThreeAtATime[i]);
                if ( arrays_ThreeAtATime[i][0] + arrays_ThreeAtATime[i][1] > arrays_ThreeAtATime[i][2]) {
