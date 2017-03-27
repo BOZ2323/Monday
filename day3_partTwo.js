@@ -1,4 +1,13 @@
-var dataTooManyWhiteSpace = "4   21  894 419  794  987 424  797  125 651  305  558 655  631  963 2  628  436 736   50  363 657  707  408 252  705   98";
+//jshint esversion:6
+var dataTooManyWhiteSpace = `4   21  894
+                           419  794  987 
+                           424  797  125
+                           651  305  558
+                           655  631  963
+                             2  628  436
+                           736   50  363
+                           657  707  408 
+                           252  705   98`;
 
 var data = dataTooManyWhiteSpace.replace(/\s+/g, ' ');// \s matches a whitespace. + matches one or more copies of the characterset. g means global meaning, not to stop at the first match, but go through the whole line.
 var triangleData = data.split(" ");//converts string into array of strings
@@ -14,69 +23,32 @@ for (var i = 0; i< triangleData.length; i++){
 /*
    Next I will loop through triangleDataNumbers (the array with all numbers in it) and use the splice()method to cut out three items out of the original Array with every for loop. Then I push those three items into a new array. All those new arrays of three are pushed to allArrayOfThree []. I put the number 3 into a variable to be able to understand eeasier later on.
    */
-
-//console.log("triangleDataNumbers: ",triangleDataNumbers.length);
+var originalTriangleData = triangleDataNumbers.length;
+console.log("triangleDataNumbers: ",triangleDataNumbers);
 var originalLength = triangleDataNumbers.length;
-var allArraysOfThree = [];
-for (var i = 0; i < originalLength/3; i++){
-    allArraysOfThree.push(triangleDataNumbers.splice(0,3));//with every loop splice cuts out the first 3 items of the array triangleDataNumbers and pushes them into allArraysOfThree
-}
+var arrayA = [];
+var arrayB = [];
+var arrayC = [];
 
-//console.log("allArraysOfThree", allArraysOfThree);
+var newMainArray = [];
 
-//function cutOfThreeArraysOfArray(){
-var arrays_ThreeAtATime = [];
-var originalArrayLength = allArraysOfThree.length;
-for(var i = 0; i < originalArrayLength/3; i++){
-    arrays_ThreeAtATime.push(allArraysOfThree.splice(0,3));
-    //console.log("allArraysOfThree.splice(0,3): ",allArraysOfThree.splice(0,3));
-}
-//console.log ("arrays_ThreeAtATime",arrays_ThreeAtATime);
+for (var i = 0; i < 9 ; i++){
+   
+    arrayA.push(triangleDataNumbers.splice(i,1));
+    console.log("Push data to ArrayA", arrayA);
+    console.log("i = ",i);
+   i += 1;    
 
-//var threeArraysOfThree = cutOfThreeArraysOfArray();
-//console.log("threeArraysOfThree",threeArraysOfThree);
+    newMainArray.push(arrayA);
 
-
-//for(var x = 0; x < times[i].length; x++) {
-  //  newTimes.push(times[i][x]);
-    //console.log(newTimes);  
-//}
-
-//console.log("allArraysOfThree ", allArraysOfThree);
-function checkIfTriangle(){
-    var count = 0;
-    //console.log("*********************");
     
-    for (var i = 0; i < arrays_ThreeAtATime.length; i++){
-            console.log( "arrays_ThreeAtATime[i][0], [i][1], [i][2]",arrays_ThreeAtATime[i][0]," ",arrays_ThreeAtATime[i][1]," ", arrays_ThreeAtATime[i][2]);
-               if ( arrays_ThreeAtATime[i][0] + arrays_ThreeAtATime[i][1] > arrays_ThreeAtATime[i][2]) {
-
-
-            count++;
-               }
-    }
-/*
-        }
-        if (allArraysOfThree[i][1] + allArraysOfThree[i+1][1] > allArraysOfThree[i+2][1] &&
-                allArraysOfThree[i][1] + allArraysOfThree[i+2][1] > allArraysOfThree[i+1][1] && 
-                allArraysOfThree[i+1][1] + allArraysOfThree[i+2][1] > allArraysOfThree[i][1]) {
-       // console.log("allArraysOfThree", allArraysOfThree);
-        }   
-    console.log("Number of real triangles: "+count);
-        if (allArraysOfThree[i][2] + allArraysOfThree[i+1][2] > allArraysOfThree[i+2][2] &&
-                allArraysOfThree[i][2] + allArraysOfThree[i+2][2] > allArraysOfThree[i+1][2] && 
-                allArraysOfThree[i+1][2] + allArraysOfThree[i+2][2] > allArraysOfThree[i][2]) {
-        }   
 }
-*/
+for (var i = 0; i <9; i++){
+    
+     arrayB.push(triangleDataNumbers.splice(i,1));
+   console.log("Push data to ArrayB", arrayB);
+
+
 }
-checkIfTriangle();
 
 
-
-
-//If result is true add result to array of valid triangles.
-//
-//
-
-//add raw data to array. 
