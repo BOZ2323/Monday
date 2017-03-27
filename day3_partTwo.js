@@ -22,11 +22,12 @@ for (var i = 0; i < originalLength/3; i++){
     allArraysOfThree.push(triangleDataNumbers.splice(0,3));//with every loop splice cuts out the first 3 items of the array triangleDataNumbers and pushes them into allArraysOfThree
 }
 
+console.log("allArraysOfThree", allArraysOfThree);
 
 //function cutOfThreeArraysOfArray(){
 var arrays_ThreeAtATime = [];
 var originalArrayLength = allArraysOfThree.length;
-for(var i = 0; i < originalArrayLength/3; i++){
+for(var i = 0; i < originalArrayLength; i++){
     arrays_ThreeAtATime.push(allArraysOfThree.splice(0,3));
     //console.log("allArraysOfThree.splice(0,3): ",allArraysOfThree.splice(0,3));
 }
@@ -46,23 +47,19 @@ function checkIfTriangle(){
     var count = 0;
     //console.log("*********************");
     for (var i = 0; i < arrays_ThreeAtATime.length; i++){
-            console.log("output for loop", arrays_ThreeAtATime[i]);
-        for(var j = 0;j < arrays_ThreeAtATime[i].length; j++){
-            console.log("output nested for loop", arrays_ThreeAtATime[i][j]);
+            console.log( "arrays_ThreeAtATime[i][0], [i][1], [i][2]",arrays_ThreeAtATime[i][0]," ",arrays_ThreeAtATime[i][1]," ", arrays_ThreeAtATime[i][2]);
+        //console.log("arrays_ThreeAtATime.length", arrays_ThreeAtATime.length);
+            //console.log("output for loop", arrays_ThreeAtATime[i]);
+               if ( arrays_ThreeAtATime[i][0] + arrays_ThreeAtATime[i][1] > arrays_ThreeAtATime[i][2]) {
+                   // allArraysOfThree[i][0] + allArraysOfThree[i+2][0] > allArraysOfThree[i+1][0] && 
+                   // allArraysOfThree[i+1][0] + allArraysOfThree[i+2][0] > allArraysOfThree[i][0]) {
 
-        //console.log(arrays_ThreeAtATime[j][0] + arrays_ThreeAtATime[j+1][0] > arrays_ThreeAtATime[j+2][0]);
-        //if (arrays_ThreeAtATime[j][0] + arrays_ThreeAtATime[j+1][0] > arrays_ThreeAtATime[j+2][0]){
-        }
-        }
-        
-        //console.log("row 31", allArraysOfThree[i][0] + allArraysOfThree[i+1][0] > allArraysOfThree[i+2][0]);
 
-               // allArraysOfThree[i][0] + allArraysOfThree[i+2][0] > allArraysOfThree[i+1][0] && 
-               // allArraysOfThree[i+1][0] + allArraysOfThree[i+2][0] > allArraysOfThree[i][0]) {
-
-            //count++;
+            count++;
            // console.log("Real Triangle Count: ",count);
             // console.log (true);
+               }
+    }
 /*
         }
         if (allArraysOfThree[i][1] + allArraysOfThree[i+1][1] > allArraysOfThree[i+2][1] &&
