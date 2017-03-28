@@ -19,31 +19,39 @@ for (var i = 0; i< triangleData.length; i++){
     //console.log("triangleData ",triangleData);
     triangleDataNumbers.push(parseInt(triangleData[i]));//parseInt gets strings and returns whole numbers
 }
+function getSetsOfTriangledata(){
+    var originalTriangleData = triangleDataNumbers.length;
+    console.log("triangleDataNumbers" ,triangleDataNumbers);
 
-var originalTriangleData = triangleDataNumbers.length;
+    var originalLength = triangleDataNumbers.length;
+    var arrayA = [];
+    var arrayB = [];
+    var arrayC = [];
 
-var originalLength = triangleDataNumbers.length;
-var arrayA = [];
-var arrayB = [];
-var arrayC = [];
+    var newMainArray = [];
 
-var newMainArray = [];
+    for (var i = 0; i < originalLength ; i++){
 
-for (var i = 0; i < originalLength ; i++){
-   
-    arrayA.push(triangleDataNumbers.splice(i,1));
-    console.log("i = ",i);
-   i += 1;    
+        arrayA.push(triangleDataNumbers.splice(i,1));
+        console.log("i = ",i);
+        i += 1;    
 
-    
+
+    }
+    for (var y = 0; y <originalLength/3; y++){
+
+        arrayB.push(triangleDataNumbers.splice(y,1));
+
+
+    }
+
+
+    console.log("Push data to ArrayA", arrayA);
+    console.log("Push data to ArrayB", arrayB);
+    console.log("triangleDataNumbers", triangleDataNumbers);
+
+    //var array_firstPos = arrayA.replace("[","");
+    //var array_firstPos = triangleData.replace(/\s+/g, ' ');
+    //console.log("array_firstPos", array_firstPos);
 }
-for (var i = 0; i <originalLength; i++){
-    
-     arrayB.push(triangleDataNumbers.splice(i,1));
-
-
-}
-
-
-   console.log("Push data to ArrayA", arrayA);
-   console.log("Push data to ArrayB", arrayB);
+getSetsOfTriangledata();
